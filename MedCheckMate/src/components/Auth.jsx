@@ -35,7 +35,7 @@ const Auth = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/send-otp",
+        `${BACKEND_URL}/users/send-otp`,
         { email: formData.email },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -61,7 +61,7 @@ const Auth = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/verify-otp",
+        `${BACKEND_URL}/users/verify-otp`,
         { email: formData.email, otp },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -80,7 +80,7 @@ const Auth = () => {
   };
 
   const handleGoogleAuth = () => {
-    window.location.href = "http://localhost:5000/users/auth/google";
+    window.location.href = `${BACKEND_URL}/users/auth/google`;
   };
 
   const handleSubmit = async (e) => {
@@ -92,7 +92,7 @@ const Auth = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/${endpoint}`,
+        `${BACKEND_URL}/${endpoint}`,
         isLogin ? { email: formData.email, password: formData.password } : formData,
         { headers: { "Content-Type": "application/json" } }
       );

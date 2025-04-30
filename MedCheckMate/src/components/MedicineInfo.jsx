@@ -16,7 +16,7 @@ const MedicineInfo = () => {
     setMedicineData(null);
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/medicine/${encodeURIComponent(searchQuery)}`, {
+      const response = await fetch(`${ML_URL}/api/medicine/${encodeURIComponent(searchQuery)}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
