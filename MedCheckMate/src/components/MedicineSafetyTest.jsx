@@ -28,7 +28,7 @@ const MedicineSafetyTest = () => {
     setPrediction(null);
 
     try {
-      const response = await fetch(`${ML_URL}/predict`, {
+      const response = await fetch(`${process.env.ML_URL}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
