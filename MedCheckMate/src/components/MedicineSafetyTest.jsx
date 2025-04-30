@@ -28,7 +28,7 @@ const MedicineSafetyTest = () => {
     setPrediction(null);
 
     try {
-      const response = await fetch('http://192.168.201.127:5000/predict', {
+      const response = await fetch('http://127.0.0.1:5000/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const MedicineSafetyTest = () => {
             required
             step="0.1"
             min="0"
-            max="100"
+            max="1000"
             placeholder="Enter assay purity percentage"
           />
         </div>
@@ -117,7 +117,7 @@ const MedicineSafetyTest = () => {
             required
             step="0.1"
             min="0"
-            max="100"
+            max="1000"
             placeholder="Enter dissolution rate percentage"
           />
         </div>
@@ -133,7 +133,7 @@ const MedicineSafetyTest = () => {
             required
             step="0.1"
             min="0"
-            max="100"
+            max="10000"
             placeholder="Enter impurity level percentage"
           />
         </div>
