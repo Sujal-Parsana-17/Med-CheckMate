@@ -55,7 +55,7 @@ userSchema.pre("save", async function (next) {
 });
 
 userSchema.methods.comparePassword = async function (password) {
-  if (!password) {
+  if (!password|| !this.password) {
     throw new Error("Password field is missing");
   }
   return bcrypt.compare(password, this.password);

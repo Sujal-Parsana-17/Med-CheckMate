@@ -676,3 +676,15 @@
     padding: 1.5rem;
   }
 }
+
+input::placeholder {
+  color: #44ff00; /* Light grey for better readability on white */
+  opacity: 1; /* Ensure full visibility */
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Input background color */
+.form-group input {
+  color: #f1f1f1; /* Ensures readable text */
+}
